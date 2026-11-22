@@ -54,7 +54,7 @@ For EVERY card give:
 - "urdu": the narration line in natural spoken Urdu (Urdu script), short (max 22 words). Write numbers as digits (7, 20, 6).
 - "caption": the SAME line in simple Roman Urdu (as Pakistanis text), max 18 words, same numbers as digits.
 - "title": 1-4 WORDS in English CAPITALS for the card (e.g. "OFFER LETTER").
-- "detail": one short line in Roman Urdu/English mix for the card (max 12 words). Hook card: "badge" instead of detail (2-4 words, e.g. "5 ASAAN STEPS").
+- "detail": one short line in Roman Urdu/English mix for the card (max 12 words), LATIN LETTERS ONLY (no Urdu script on cards). Hook card: "badge" instead of detail (2-4 words, e.g. "5 ASAAN STEPS").
 Card kinds: "title" (first card), "step" (numbered points, with "n": 1,2,3...), "warn" (optional, a common mistake).
 Tone: friendly, clear, honest. No guarantees ("100% visa" etc.), no fees or numbers that are not in the facts, no politics.
 
@@ -72,6 +72,10 @@ function validate(t, s) {
     if (!['title', 'step', 'warn'].includes(c.kind)) throw new Error('bad card kind ' + c.kind);
     if (c.kind === 'step') c.n = ++n;
     if (c.caption.split(/\s+/).length > 22) throw new Error('caption too long');
+    // the card font and the caption font are Latin only: Urdu script there shows as broken boxes
+    for (const k of ['caption', 'title', 'detail', 'badge']) {
+      if (c[k] && /[^\u0000-\u024F\u2010-\u2027\u20AC\s]/u.test(c[k].replace(/\p{Extended_Pictographic}|\uFE0F/gu, ''))) throw new Error(`non-Latin text on card: ${k}`);
+    }
   }
   // every number must come from the facts (step numbers and the step count are fine)
   const allowed = new Set([...digits(t.facts.join(' ')), ...Array.from({ length: 9 }, (_, i) => String(i + 1))]);

@@ -1,0 +1,96 @@
+name: Malaysia Student Life daily Shorts
+
+on:
+  # Runs once a day after the Gemini/YouTube limits reset (16:00 MY); the second time is a backup and does nothing
+  # if today's videos are already uploaded. Videos are uploaded private and go public by themselves at
+  # PUBLISH_SLOTS_UTC (5 pm, 8 pm, 10:30 pm Pakistan time).
+  schedule:
+    - cron: "20 9 * * *"
+    - cron: "50 11 * * *"
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many Shorts"
+        default: "3"
+      upload:
+        description: "Upload to YouTube (off = test only; videos go to the qa branch)"
+        type: boolean
+        default: true
+      topic:
+        description: "Optional topic id from msl/facts.json"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: msl-daily
+  cancel-in-progress: false
+
+jobs:
+  shorts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      TZ: Asia/Kuala_Lumpur
+      FFMPEG_PATH: ffmpeg
+      PYTHON: python
+      ENGINE_DIR: ${{ github.workspace }}/engine
+      GEMINI_TEXT_MODEL: gemini-3.8-flash
+      GEMINI_TTS_MODEL: gemini-3.8-flash-tts
+      GEMINI_TTS_VOICE: Charon
+      PUBLISH_SLOTS_UTC: "12:00,15:00,17:30"
+      WHATSAPP: "+60 11-2835 7365"
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Shared engine (Gemini, voice, upload helpers), pinned
+        uses: actions/checkout@v4
+        with:
+          repository: shehrozimtiaz0797-7/empire-maps-pipeline
+          ref: 95fbec089bd68a0dace065c4fc497af66e805fd8
+          path: engine
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q pillow numpy
+      - uses: actions/cache@v4
+        with:
+          path: data
+          key: msl-borders-v1
+      - name: Make and upload the Shorts
+        env:
+          COUNT: ${{ inputs.count || '3' }}
+          TOPIC: ${{ inputs.topic }}
+          DO_UPLOAD: ${{ github.event_name == 'schedule' || inputs.upload }}
+        run: |
+          set -- --count "$COUNT"
+          if [ -n "$TOPIC" ]; then set -- "$@" --topic "$TOPIC"; fi
+          if [ "$DO_UPLOAD" != "true" ]; then set -- "$@" --no-upload; fi
+          node msl/make.js "$@" 2>&1 | tee run.log
+          exit ${PIPESTATUS[0]}
+      - name: Save history
+        if: always()
+        run: |
+          [ -f history.json ] || exit 0
+          git config user.name "msl-bot"
+          git config user.email "msl-bot@users.noreply.github.com"
+          git add history.json
+          git commit -m "History $(date +'%Y-%m-%d %H:%M')" || exit 0
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
+      - name: Save the videos for checking (qa branch)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p /tmp/qa && cp run.log /tmp/qa/ 2>/dev/null || true
+          for d in output/*/; do n=$(basename "$d"); mkdir -p "/tmp/qa/$n"; cp "$d"short.mp4 "$d"script.json "$d"meta.json "/tmp/qa/$n/" 2>/dev/null || true; done
+          cd /tmp/qa && git init -q -b qa && git add . && git -c user.name=msl-bot -c user.email=msl-bot@users.noreply.github.com commit -qm "qa $(date +'%Y-%m-%d %H:%M')"
+          git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" qa || echo "could not save qa"

@@ -1,0 +1,151 @@
+{
+  "checked": "2026-11-22",
+  "note": "Only these facts may be used in videos. Each topic lists its sources. Re-check monthly.",
+  "topics": [
+    {
+      "id": "visa_steps",
+      "name": "Malaysia student visa: the 5 steps",
+      "facts": [
+        "Step 1: get an offer letter from a recognised Malaysian university or college.",
+        "Step 2: the student pass (visa) application is made through EMGS (Education Malaysia Global Services); usually the university submits it, and the student must be outside Malaysia (in the home country) while it is processed.",
+        "Step 3: after approval the student gets an eVAL (electronic Visa Approval Letter).",
+        "Step 4: students from countries that need a visa, such as Pakistan and India, take the eVAL to the Malaysian embassy or high commission and get a Single Entry Visa (SEV).",
+        "Step 5: after arriving in Malaysia, do the medical screening at an EMGS panel clinic within 7 days, then the student pass is endorsed (stuck) in the passport.",
+        "The eVAL is valid for 6 months from the date of approval; enter Malaysia before it expires.",
+        "Processing time is several weeks, so apply early."
+      ],
+      "sources": ["https://educationmalaysia.gov.my/visa-new-application", "https://aasd.um.edu.my/website_doc/DEP_UPPA/Guidelines/Student Pass Appendix_eVAL_Guide_2020.pdf", "https://www.idp.com/pakistan/blog/malaysia-student-visa/", "https://utmpesisir.utm.my/visa"]
+    },
+    {
+      "id": "no_tourist_visa",
+      "name": "Do not come on a tourist visa to get a student pass",
+      "facts": [
+        "A tourist (social visit) pass cannot be converted into a student pass.",
+        "You must get the student pass approval (eVAL) before entering Malaysia; the application is processed while you are outside Malaysia.",
+        "If you enter Malaysia on a social pass while waiting, you may be asked to leave and re-enter with the Visa Approval Letter.",
+        "Being in Malaysia on a visit visa during the application can cause delays or rejection."
+      ],
+      "sources": ["https://cyberjaya.edu.my/international-admissions/", "https://umki.umk.edu.my/en/faq.cfm", "https://sunway.edu.my/ipoh/node/139"]
+    },
+    {
+      "id": "arrival",
+      "name": "What to do after landing in Malaysia",
+      "facts": [
+        "Bring your passport, the eVAL and the EMGS approval letter, and your Single Entry Visa if your country needs one.",
+        "Most international students also need to fill the Malaysia Digital Arrival Card (MDAC) before entering Malaysia.",
+        "Do the post-arrival medical screening at an EMGS panel clinic within 7 days of arrival.",
+        "Register at your university, then the student pass sticker is endorsed in your passport.",
+        "After the student pass is endorsed you get the i-Kad (international student card)."
+      ],
+      "sources": ["https://study.um.edu.my/doc/VISA SERVICES/Frequently Asked Questions - eVAL.pdf", "https://www.idp.com/global/study-abroad/study-in-malaysia/", "https://www.monash.edu.my/student-services/international-students/student-pass", "https://aasd.um.edu.my/website_doc/DEP_UPPA/Guidelines/Student Pass Appendix_eVAL_Guide_2020.pdf"]
+    },
+    {
+      "id": "part_time",
+      "name": "Part-time work rules for international students",
+      "facts": [
+        "International students may work part-time for a maximum of 20 hours per week.",
+        "Work is allowed only during semester breaks or holidays of more than 7 days, not during normal study weeks.",
+        "Allowed places include restaurants, petrol stations, mini markets and hotels.",
+        "You need approval from the Immigration Department; the application is made through your university, with a support letter showing your semester and holiday dates.",
+        "Your student pass must stay valid; working without approval is not allowed."
+      ],
+      "sources": ["https://educationmalaysia.gov.my/jobs-and-careers/", "https://www.imi.gov.my/index.php/en/main-services/student/", "https://educationmalaysia.gov.my/news_update/frequently-asked-questions-faq-for-international-students", "https://apu.edu.my/node/168"]
+    },
+    {
+      "id": "ikad",
+      "name": "What is the i-Kad",
+      "facts": [
+        "The i-Kad is a biometric identification card for international students, issued after the student pass is endorsed.",
+        "It is handled through EMGS together with the student pass; you do not apply for it separately.",
+        "It is a valid ID in Peninsular Malaysia, so you can keep your passport safe at home.",
+        "It is not a travel document: you still need your passport to travel abroad or to Sabah and Sarawak (East Malaysia).",
+        "If you lose it, a police report is needed to apply for a replacement."
+      ],
+      "sources": ["https://ic.umt.edu.my/?p=14856", "https://www.easyuni.com/advice/iKAD-for-international-students-malaysia-3452/", "https://educationmalaysia.gov.my/news/", "https://m.lincoln.edu.my/help/ikad"]
+    },
+    {
+      "id": "renewal",
+      "name": "Student pass renewal: do not be late",
+      "facts": [
+        "The student pass must be renewed before it expires (usually every year, or as given on your pass).",
+        "Your university can start the renewal up to 3 months before the expiry date.",
+        "EMGS recommends submitting the renewal no later than 6 weeks before expiry.",
+        "Late renewal brings extra fines or a special pass fee.",
+        "After the pass expires it cannot be renewed; you must apply for a new eVAL from outside Malaysia.",
+        "Insurance bought through EMGS must also be renewed every year."
+      ],
+      "sources": ["https://educationmalaysia.gov.my/visa-renewal-for-existing-student/", "https://sites.google.com/upsi.edu.my/imc-visa/full-time-student/renewal", "https://international.utm.my/?p=55511"]
+    },
+    {
+      "id": "documents",
+      "name": "Documents needed for the student visa",
+      "facts": [
+        "Offer letter from the Malaysian university or college.",
+        "Passport: copy of the pages; universities usually ask for long validity (some ask for more than 18 months).",
+        "Passport-size photo with a white background (35mm x 45mm).",
+        "Academic transcripts and certificates.",
+        "Proof of English (for example IELTS or TOEFL) if your course asks for it.",
+        "A completed Health Declaration Form.",
+        "Fees paid to EMGS and the immigration are not refunded if the eVAL is rejected, so check every document carefully."
+      ],
+      "sources": ["https://visa.educationmalaysia.gov.my/guidelines", "https://www.unimel.edu.my/en/download/international/DocumentRequirementForSTUDENT_PASS_APPLICATION.pdf", "https://mmu.edu.my/wp-content/uploads/2024/08/Apply-for-Student-Pass-UG.pdf", "https://www.nottingham.edu.my/International/documents/Visa/CHECKLIST-VAL-2026.pdf"]
+    },
+    {
+      "id": "intakes",
+      "name": "When to apply: intakes",
+      "facts": [
+        "Public universities usually have 2 intakes: September/October (main) and February/March.",
+        "Many private universities have more intakes, for example January, May and September.",
+        "Exact dates differ by university and course, so check the university website.",
+        "Apply early: some universities ask for all documents at least 8 weeks before the intake, because the visa also takes weeks."
+      ],
+      "sources": ["https://www.timeshighereducation.com/counsellor/admissions-processes-and-funding/how-apply-study-malaysia", "https://www.hotcoursesabroad.com/study-in-malaysia/destination-guides/all-about-studying-in-malaysia/", "https://sunwayuniversity.edu.my/international/how-apply"]
+    },
+    {
+      "id": "living_cost",
+      "name": "Student living cost in Malaysia",
+      "facts": [
+        "Monthly cost depends on the city, the type of accommodation and your lifestyle.",
+        "Accommodation is usually the biggest monthly expense; on-campus hostel is usually the cheapest option.",
+        "Kuala Lumpur is usually more expensive than cities like Penang or Johor Bahru.",
+        "A simple local meal costs about RM5 to RM15.",
+        "Make a monthly budget before you come: rent, food, transport, phone and internet."
+      ],
+      "sources": ["https://www.idp.com/blog/complete-guide-cost-of-studying-and-living-in-malaysia", "https://educationmalaysia.gov.my/plan-your-studies/plan-your-budget/cost-of-living", "https://www.hotcoursesabroad.com/study-in-malaysia/student-life/student-life-in-malaysia/"]
+    },
+    {
+      "id": "full_time_only",
+      "name": "International students can only study full time",
+      "facts": [
+        "Under current rules, international students can only enrol in full-time courses (except mobility programmes).",
+        "A student pass is for study at an approved institution; it does not allow normal full-time work.",
+        "Part-time work is only allowed in semester breaks or holidays of more than 7 days, up to 20 hours a week, with approval."
+      ],
+      "sources": ["https://educationmalaysia.gov.my/get-in-touch/faq", "https://educationmalaysia.gov.my/jobs-and-careers/"]
+    },
+    {
+      "id": "uni_types",
+      "name": "Public, private and international branch campuses",
+      "facts": [
+        "Malaysia has public universities, private universities and branch campuses of foreign universities.",
+        "Examples of foreign branch campuses in Malaysia are Monash University Malaysia and the University of Nottingham Malaysia.",
+        "Many programmes are taught in English.",
+        "Public universities usually have fewer intakes than private universities."
+      ],
+      "sources": ["https://www.timeshighereducation.com/counsellor/admissions-processes-and-funding/how-apply-study-malaysia", "https://www.idp.com/global/study-abroad/study-in-malaysia/"]
+    },
+    {
+      "id": "mistakes",
+      "name": "Common mistakes that can ruin your Malaysia study plan",
+      "facts": [
+        "Coming on a tourist visa and hoping to change it to a student pass: this is not allowed.",
+        "Applying late: the visa takes weeks, so apply well before the intake.",
+        "Wrong or missing documents: EMGS and immigration fees are not refunded if the eVAL is rejected.",
+        "Missing the 7-day medical screening after arrival.",
+        "Working during study weeks: part-time work is only allowed in breaks of more than 7 days, up to 20 hours a week, with approval.",
+        "Renewing the student pass late: after it expires you need a new eVAL from outside Malaysia."
+      ],
+      "sources": ["https://cyberjaya.edu.my/international-admissions/", "https://www.nottingham.edu.my/International/documents/Visa/CHECKLIST-VAL-2026.pdf", "https://educationmalaysia.gov.my/jobs-and-careers/", "https://sites.google.com/upsi.edu.my/imc-visa/full-time-student/renewal"]
+    }
+  ]
+}

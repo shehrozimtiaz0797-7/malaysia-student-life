@@ -41,6 +41,7 @@ function pickTopics(n) {
 }
 
 const digits = s => (String(s).match(/\d+/g) || []);
+const recent = () => { const t = readHist().slice(-9).map(h => h.title).filter(Boolean); return t.length ? ` (recent: ${t.map(x => JSON.stringify(x)).join(', ')})` : ''; };
 
 function prompt(t) {
   return `You write YouTube Shorts for "Malaysia Student Life", a channel that helps students from Pakistan and India who want to study in Malaysia.
@@ -59,7 +60,7 @@ Card kinds: "title" (first card), "step" (numbered points, with "n": 1,2,3...), 
 Tone: friendly, clear, honest. No guarantees ("100% visa" etc.), no fees or numbers that are not in the facts, no politics.
 
 Return ONLY JSON:
-{"title": "English YouTube title under 70 characters with 1 emoji (e.g. 🇲🇾), searchable", "summary": "2 English sentences for the description", "tags": [8 to 12 English search tags], "hashtags": [3 hashtags like "#StudyInMalaysia"], "scenes": [cards in order]}`;
+{"title": "English YouTube title under 70 characters with 1 emoji (e.g. 🇲🇾), searchable — most viewers are from Pakistan and India, so use words they search (e.g. 'from Pakistan', 'Pakistani students', '2026') when natural; vary the format (question, number, common mistake) and make it different from the channel's recent titles${recent()}", "summary": "2 English sentences for the description", "tags": [8 to 12 English search tags], "hashtags": [3 hashtags like "#StudyInMalaysia"], "scenes": [cards in order]}`;
 }
 
 function validate(t, s) {

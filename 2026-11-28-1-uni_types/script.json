@@ -1,0 +1,60 @@
+{
+  "title": "Public vs Private Universities in Malaysia for Pakistani Students 🇲🇾",
+  "summary": "Learn about the different types of universities available in Malaysia for international students. Discover public, private, and foreign branch campus options like Monash and Nottingham.",
+  "tags": [
+    "Study in Malaysia",
+    "Malaysia Universities",
+    "Public Universities Malaysia",
+    "Private Universities Malaysia",
+    "Foreign Branch Campuses Malaysia",
+    "Monash University Malaysia",
+    "University of Nottingham Malaysia",
+    "Pakistani Students in Malaysia",
+    "Study Abroad"
+  ],
+  "hashtags": [
+    "#StudyInMalaysia",
+    "#MalaysiaUniversities",
+    "#PakistaniStudents"
+  ],
+  "scenes": [
+    {
+      "kind": "title",
+      "title": "MALAYSIA UNIVERSITIES",
+      "badge": "UNIVERSITY TYPES GUIDE",
+      "urdu": "ملائیشیا میں کون سی یونیورسٹیاں ہیں؟ آئیے پبلک، پرائیویٹ اور برانچ کیمپس کے بارے میں جانتے ہیں۔",
+      "caption": "Malaysia mein kaun si universities hain? Aayein public, private aur branch campuses ke baare mein jaante hain."
+    },
+    {
+      "kind": "step",
+      "n": 1,
+      "title": "3 UNIVERSITY TYPES",
+      "detail": "Public, Private and Foreign Branch Campuses",
+      "urdu": "ملائیشیا میں پبلک یونیورسٹیاں، پرائیویٹ یونیورسٹیاں اور غیر ملکی یونیورسٹیوں کے برانچ کیمپس موجود ہیں۔",
+      "caption": "Malaysia mein public, private aur ghair mulki universities ke branch campuses mojood hain."
+    },
+    {
+      "kind": "step",
+      "n": 2,
+      "title": "FOREIGN CAMPUSES",
+      "detail": "Monash & Nottingham Branch Campuses",
+      "urdu": "فارن برانچ کیمپس کی مثالوں میں Monash University Malaysia اور University of Nottingham Malaysia شامل ہیں۔",
+      "caption": "Foreign branch campuses ki misalon mein Monash aur University of Nottingham Malaysia shamil hain."
+    },
+    {
+      "kind": "step",
+      "n": 3,
+      "title": "TAUGHT IN ENGLISH",
+      "detail": "Many programmes offered in English medium",
+      "urdu": "سب سے اچھی بات یہ ہے کہ ملائیشیا میں بہت سے پروگرامز انگلش میں پڑھائے جاتے ہیں۔",
+      "caption": "Sab se achhi baat yeh hai ke Malaysia mein bohat se programmes English mein parhaye jaate hain."
+    },
+    {
+      "kind": "warn",
+      "title": "FEWER INTAKES",
+      "detail": "Public universities usually have fewer intakes",
+      "urdu": "ایک اہم بات! پبلک یونیورسٹیوں میں پرائیویٹ یونیورسٹیوں کے مقابلے میں کم intakes ہوتی ہیں۔",
+      "caption": "Ek ahem baat! Public universities mein private universities ke muqabla mein kam intakes hoti hain."
+    }
+  ]
+}
